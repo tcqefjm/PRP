@@ -7,7 +7,7 @@ class Transaction(object):
     def encrypt(self,s,a,p):
         encrypted_transaction={}
         for i,value in enumerate(self.item):
-            r=number.getRandomNBitInteger(400)
+            r=number.getRandomNBitInteger(100)
             encrypted_transaction['item'+str(i)]=str(s*(a+r)%p if value else s*r%p)
         return encrypted_transaction
 
