@@ -1,7 +1,7 @@
 from Crypto.Util import number
 
 s=number.getRandomNBitInteger(4090)
-a=number.getPrime(512)
+a=number.getPrime(500)
 p=number.getPrime(4096)
 with open('Security_Parameter.dat','a') as f:
     f.write(str(s)+'\n')
