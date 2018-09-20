@@ -8,7 +8,7 @@ class Transaction(object):
     def __init__(self,item_set,item_num=1000):
         self.item=[int(str(i) in item_set) for i in range(item_num)]
     def encrypt(self,a,p,s):
-        return {str(i):str(s*(a*value+number.getRandomNBitInteger(300))%p) for i,value in enumerate(self.item)}
+        return {str(i):str(s*(a*value+number.getRandomNBitInteger(25))%p) for i,value in enumerate(self.item)}
     
 def init(username):
     cf=ConfigParser()
